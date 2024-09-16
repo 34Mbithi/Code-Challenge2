@@ -3,9 +3,9 @@ Ensure you have Python 3.8+ installed on your system.
 
 Clone this repository:
 
-git clone <repository-url>
+git clone <https://github.com/34Mbithi/Code-Challenge2/edit/master/coffee_shop>
 cd coffee_shop_domain
-(Optional) Create and activate a virtual environment:
+Create and activate a virtual environment:
 
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
@@ -27,7 +27,6 @@ create_order(coffee, price): Creates a new order for the customer
 most_aficionado(coffee): Class method that returns the customer who has spent the most on a given coffee
 Coffee (coffee.py)
 The Coffee class represents a type of coffee available in the shop.
-
 Attributes:
 
 name: String, at least 3 characters long
@@ -55,24 +54,4 @@ Running Tests
 To run the tests, ensure you're in the project root directory and run:
 
 pytest
-This will discover and run all the tests in the tests/ directory.
-
-Logic Behind Classes and Attributes
-Encapsulation: Each class encapsulates its data (attributes) and behaviors (methods). For example, the Customer class encapsulates the customer's name and their orders.
-
-Data Validation: Setters are used to validate data before assigning it to attributes. For instance, the name setter in both Customer and Coffee classes ensures the name meets specific criteria.
-
-Relationships:
-
-A Customer can have many Orders (one-to-many)
-A Coffee can have many Orders (one-to-many)
-An Order belongs to one Customer and one Coffee (many-to-one for both)
-Aggregation Methods: Methods like num_orders() and average_price() in the Coffee class provide aggregate information about the orders.
-
-Unique Collections: Methods like coffees() in Customer and customers() in Coffee return unique collections, implemented using sets.
-
-Class Methods: The most_aficionado() method in Customer is a class method, as it operates on the class level rather than on a specific instance.
-
-Bidirectional Relationships: When an Order is created, it's added to both the Customer's and Coffee's order lists, maintaining the bidirectional relationship.
-
-This project demonstrates key OOP concepts including encapsulation, data validation, class relationships, and method design. It provides a foundation that can be extended for more complex coffee shop operations.
+This will discover and run all the tests in the tests/ directory
