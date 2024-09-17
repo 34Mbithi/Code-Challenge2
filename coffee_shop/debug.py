@@ -2,11 +2,11 @@ from customer import Customer
 from coffee import Coffee
 from order import Order
 
-# Create some customers
+# Create customers
 john = Customer("John")
 jane = Customer("Jane")
 
-# Create some coffees
+# Create coffees
 latte = Coffee("Latte")
 espresso = Coffee("Espresso")
 
@@ -19,5 +19,5 @@ jane.create_order(latte, 6.0)
 print(f"{john.name} ordered {john.coffees()}")
 print(f"{latte.name} has {latte.num_orders()} orders with average price {latte.average_price()}")
 
-# Check who spent the most on a coffee
+
 print(Customer.most_aficionado(latte))  # Outputs Customer object who spent the most

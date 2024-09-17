@@ -1,3 +1,8 @@
+from customer import Customer
+from coffee import Coffee
+
+
+
 class Order:
     _all = []  # Class-level list to store all order instances
 
@@ -7,7 +12,7 @@ class Order:
         self.price = price
         Order._all.append(self)
 
-    # Property for 'customer' with validation
+    # Property for customer with validation
     @property
     def customer(self):
         return self._customer
@@ -18,7 +23,7 @@ class Order:
             raise ValueError("Order must have a valid Customer instance.")
         self._customer = value
 
-    # Property for 'coffee' with validation
+    # Property for coffee with validation
     @property
     def coffee(self):
         return self._coffee
@@ -29,7 +34,7 @@ class Order:
             raise ValueError("Order must have a valid Coffee instance.")
         self._coffee = value
 
-    # Property for 'price' with validation
+    # Property for price with validation
     @property
     def price(self):
         return self._price
